@@ -42,7 +42,7 @@ header .iconoCarrito {
     color: var(--color-white);
 }
 
-.iconoCarrito i, .iconoCarrito sup {
+.iconoCarrito i, .iconoCarrito sup, .productoPopUp i {
     cursor: pointer;
 }
 
@@ -50,7 +50,7 @@ header .iconoCarrito {
     font-size: 1rem;
 }
 
-#carrito {
+input {
     display: none;
 }
 
@@ -125,8 +125,10 @@ header .iconoCarrito {
 .carritoProductoDescripcion :last-child{
     text-align: center;
     width: 30%;
-    height: 20px;
+    height: 25px;
     overflow: hidden;
+    border: 1px solid var(--color-white);
+    
 }
 
 .carritoProductoPrecio {
@@ -243,8 +245,9 @@ main {
 }
 
 .producto .descripcion precio {
-    width: 40%;
-    margin-top: 60px;
+    width: 35%;
+    margin-block: 20px;
+
     font-size: 2.5rem;
     display: flex;
     justify-content: space-between;
@@ -260,7 +263,9 @@ main {
     margin-top: 30px;
 }
 
-.producto a, .producto button {
+.producto .obtenerButton, .producto .labelProductoPopUpFirst {
+    display: grid;
+    place-content: center;
     font-size: 1.5rem;
     font-weight: bold;
     width: 180px;
@@ -269,4 +274,102 @@ main {
     border: 0;
     color: var(--color-white);
     cursor: pointer;
+}
+
+#productoPopUp:checked + .productoPopUp{
+    opacity: 1;
+    height: 700px;
+    width: 600px;
+}
+
+.productoPopUp {
+    position: fixed;
+    opacity: 0;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    color: var(--color-black);
+    background-color: var(--color-white);
+    border: 2px solid var(--color-gray);
+    transition: all 0.2s ease; 
+    font-weight: normal;
+}
+
+.productoPopUp label i {
+    font-size: 2rem;
+}
+
+.productoPopUp label:first-child {
+    width: 32px;
+    height: 40px;
+    position: relative;
+    top: 5px;
+    left: 275px;
+}
+
+/* Producto Pop Up Estructura */
+
+.productoPopUpImagen {
+    height: 50%;
+    width: 90%;
+    background-color: var(--color-blue);
+}
+
+.productoPopUp h3 {
+    font-size: 1.8rem
+}
+
+.productoPopUpDescripcion {
+    margin-top: 10px;
+    width: 90%;
+}
+
+.productoPopUpDescripcion .descripcionStarsSmall {
+    font-size: 1.5rem;
+}
+
+.productoPopUpPrecio {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    width: 34%;
+    justify-content: space-between;
+    display: flex;
+    align-items: flex-end;
+}
+
+.productoPopUpAgregar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 30%;
+}
+
+.productoPopUpAgregar :first-child {
+    font-size: 3rem;
+    overflow: hidden;
+    text-align: center;
+    height: 75px;
+    width: 45%;
+    border: 1px solid var(--color-black);
+    border-radius: 10px;
+}
+
+.productoPopUpAgregar label {
+    height: 75px;
+
+    display: grid;
+    place-content: center;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    font-weight: bold;
+    font-size: 1.5rem;
+    cursor: pointer;
+    width: 50%;
 }
