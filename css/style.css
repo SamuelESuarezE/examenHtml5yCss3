@@ -9,6 +9,10 @@
     list-style-type: none;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     width: 100vw;
     max-width: 100vw;
@@ -25,6 +29,8 @@ header {
     background-color: var(--color-black);
 }
 
+/* CARRITO */
+
 header .iconoCarrito {
     height: 100%;
     width: 10%;
@@ -36,8 +42,121 @@ header .iconoCarrito {
     color: var(--color-white);
 }
 
+.iconoCarrito i, .iconoCarrito sup {
+    cursor: pointer;
+}
+
 .iconoCarrito sup {
     font-size: 1rem;
+}
+
+#carrito {
+    display: none;
+}
+
+#carrito:checked + .carritoPopUp{
+    opacity: 1;
+    height: 800px;
+    width: 600px;
+}
+
+.carritoPopUp {
+    position: fixed;
+    opacity: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    color: var(--color-black);
+    background-color: var(--color-white);
+    border: 2px solid var(--color-gray);
+    transition: all 0.2s ease; 
+    font-weight: normal;
+}
+
+/* Estructura carrito */
+
+.carritoPopUp label {
+    width: 32px;
+    height: 20px;
+    position: relative;
+    left: 275px;
+}
+
+.carritoPopUp h2 {
+    font-size: 2rem;
+}
+
+.carritoCarrusel {
+    display: grid;
+    width: 90%;
+    height: 75%;
+    gap: 10px;
+    overflow: hidden;
+    grid-template-rows: repeat(6, 150px);
+    overflow-y: scroll;
+}
+
+.carritoProducto {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    color: white;
+    background-color: var(--color-black);
+    padding: 10px;
+}
+
+.carritoProductoImagen {
+    background-color: var(--color-blue);
+}
+
+.carritoProductoDescripcion {
+    display: grid;
+    place-content: center;
+    place-items: center;
+    font-size: 1rem;
+}
+
+.carritoProductoDescripcion :last-child{
+    text-align: center;
+    width: 30%;
+    height: 20px;
+    overflow: hidden;
+}
+
+.carritoProductoPrecio {
+    display: grid;
+    place-content: center;
+    font-size: 1.5rem;
+}
+
+.carritoTotal {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    margin-top: 10px;
+    padding: 10px;
+    width: 90%;
+    height: 12%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.carritoTotalPagar button {
+    cursor: pointer;
+    width: 100%;
+    height: 40%;
+    border-radius: 0;
+    border: 0;
+    font-weight: bold;
+    background-color: var(--color-white);
+    color: var(--color-black);
 }
 
 header ul {
@@ -149,4 +268,5 @@ main {
     background-color: var(--color-blue);
     border: 0;
     color: var(--color-white);
+    cursor: pointer;
 }

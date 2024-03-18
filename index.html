@@ -10,23 +10,102 @@
 <body>
     <header>
         <ul>
-            <li><a href="#">Producto 1</a></li>
-            <li><a href="#">Producto 2</a></li>
-            <li><a href="#">Producto 3</a></li>
-            <li><a href="#">Producto 4</a></li>
-            <li><a href="#">Producto 5</a></li>
-            <li><a href="#">Producto 6</a></li>
-            <li><a href="#">Producto 7</a></li>
-            <li><a href="#">Producto 8</a></li>
-            <li><a href="#">Producto 9</a></li>
-            <li><a href="#">Producto 10</a></li>
+            <li><a href="#p1">Producto 1</a></li>
+            <li><a href="#p2">Producto 2</a></li>
+            <li><a href="#p3">Producto 3</a></li>
+            <li><a href="#p4">Producto 4</a></li>
+            <li><a href="#p5">Producto 5</a></li>
+            <li><a href="#p6">Producto 6</a></li>
+            <li><a href="#p7">Producto 7</a></li>
+            <li><a href="#p8">Producto 8</a></li>
+            <li><a href="#p9">Producto 9</a></li>
+            <li><a href="#p10">Producto 10</a></li>
         </ul>
-        <div class="iconoCarrito">
-            <i class='bx bxs-cart'></i><sup>10</sup>
+        <div class="iconoCarrito" class="checkbtn">
+            <label for="carrito">
+                <i class='bx bxs-cart'></i><sup>10</sup>
+            </label>
+            <input type="checkbox" id="carrito">
+            <div class="carritoPopUp">
+                <label for="carrito">
+                    <i class='bx bx-x-circle' style='color:#000e24'  ></i>
+                </label>
+                <h2>Detalles</h2>
+                <div class="carritoCarrusel">
+                    <div class="carritoProducto">
+                        <div class="carritoProductoImagen"></div>
+                        <div class="carritoProductoDescripcion">
+                            <p>Nombre del producto</p>
+                            <p contenteditable>1</p>
+                        </div>
+                        <div class="carritoProductoPrecio">
+                            <p>$100.000</p><small>$99.99</small>
+                        </div>
+                    </div>
+                    <div class="carritoProducto">
+                        <div class="carritoProductoImagen"></div>
+                        <div class="carritoProductoDescripcion">
+                            <p>Nombre del producto</p>
+                            <p contenteditable>1</p>
+                        </div>
+                        <div class="carritoProductoPrecio">
+                            <p>$100.000</p><small>$99.99</small>
+                        </div>
+                    </div>
+                    <div class="carritoProducto">
+                        <div class="carritoProductoImagen"></div>
+                        <div class="carritoProductoDescripcion">
+                            <p>Nombre del producto</p>
+                            <p contenteditable>1</p>
+                        </div>
+                        <div class="carritoProductoPrecio">
+                            <p>$100.000</p><small>$99.99</small>
+                        </div>
+                    </div>
+                    <div class="carritoProducto">
+                        <div class="carritoProductoImagen"></div>
+                        <div class="carritoProductoDescripcion">
+                            <p>Nombre del producto</p>
+                            <p contenteditable>1</p>
+                        </div>
+                        <div class="carritoProductoPrecio">
+                            <p>$100.000</p><small>$99.99</small>
+                        </div>
+                    </div>
+                    <div class="carritoProducto">
+                        <div class="carritoProductoImagen"></div>
+                        <div class="carritoProductoDescripcion">
+                            <p>Nombre del producto</p>
+                            <p contenteditable>1</p>
+                        </div>
+                        <div class="carritoProductoPrecio">
+                            <p>$100.000</p><small>$99.99</small>
+                        </div>
+                    </div>
+                    <div class="carritoProducto">
+                        <div class="carritoProductoImagen"></div>
+                        <div class="carritoProductoDescripcion">
+                            <p>Nombre del producto</p>
+                            <p contenteditable>1</p>
+                        </div>
+                        <div class="carritoProductoPrecio">
+                            <p>$100.000</p><small>$99.99</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="carritoTotal">
+                    <p>Total</p>
+                    <div class="carritoTotalPagar">
+                        <p>$1.999.8</p>
+                        <button>Pagar</button>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </header>
     <main>
-        <div class="producto">
+        <div class="producto" id="p1">
             <div class="galeria">
                 <div class="imagen"></div>
                 <div class="imagen"></div>
@@ -52,34 +131,7 @@
                 </a>
             </div>
         </div>
-        <div class="producto">
-            <div class="galeria">
-                <div class="imagen"></div>
-                <div class="imagen"></div>
-                <div class="imagen"></div>
-                <div class="imagen"></div>
-                <div class="imagen"></div>
-            </div>
-            <div class="descripcion">
-                <h2>Nombre del producto</h2>
-                <div class="descripcionStars">
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit adipisci rem dolore quas, quaerat alias eos? Placeat, omnis distinctio veniam fuga sapiente ut reiciendis provident numquam maiores amet fugit voluptatibus?</p>
-                <precio>
-                    <p>$100.000</p><small>$99.99</small>
-                </precio>
-                <a href="">
-                    <button>Obtener</button>
-                </a>
-            </div>
-            
-        </div>
-        <div class="producto">
+        <div class="producto" id="p2">
             <div class="galeria">
                 <div class="imagen"></div>
                 <div class="imagen"></div>
@@ -106,7 +158,7 @@
             </div>
             
         </div>
-        <div class="producto">
+        <div class="producto" id="p3">
             <div class="galeria">
                 <div class="imagen"></div>
                 <div class="imagen"></div>
@@ -133,7 +185,7 @@
             </div>
             
         </div>
-        <div class="producto">
+        <div class="producto" id="p4">
             <div class="galeria">
                 <div class="imagen"></div>
                 <div class="imagen"></div>
@@ -160,7 +212,7 @@
             </div>
             
         </div>
-        <div class="producto">
+        <div class="producto" id="p5">
             <div class="galeria">
                 <div class="imagen"></div>
                 <div class="imagen"></div>
@@ -187,7 +239,7 @@
             </div>
             
         </div>
-        <div class="producto">
+        <div class="producto" id="p6">
             <div class="galeria">
                 <div class="imagen"></div>
                 <div class="imagen"></div>
@@ -214,7 +266,7 @@
             </div>
             
         </div>
-        <div class="producto">
+        <div class="producto" id="p7">
             <div class="galeria">
                 <div class="imagen"></div>
                 <div class="imagen"></div>
@@ -241,7 +293,7 @@
             </div>
             
         </div>
-        <div class="producto">
+        <div class="producto" id="p8">
             <div class="galeria">
                 <div class="imagen"></div>
                 <div class="imagen"></div>
@@ -268,7 +320,34 @@
             </div>
             
         </div>
-        <div class="producto">
+        <div class="producto" id="p9">
+            <div class="galeria">
+                <div class="imagen"></div>
+                <div class="imagen"></div>
+                <div class="imagen"></div>
+                <div class="imagen"></div>
+                <div class="imagen"></div>
+            </div>
+            <div class="descripcion">
+                <h2>Nombre del producto</h2>
+                <div class="descripcionStars">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit adipisci rem dolore quas, quaerat alias eos? Placeat, omnis distinctio veniam fuga sapiente ut reiciendis provident numquam maiores amet fugit voluptatibus?</p>
+                <precio>
+                    <p>$100.000</p><small>$99.99</small>
+                </precio>
+                <a href="">
+                    <button>Obtener</button>
+                </a>
+            </div>
+            
+        </div>
+        <div class="producto" id="p10">
             <div class="galeria">
                 <div class="imagen"></div>
                 <div class="imagen"></div>
